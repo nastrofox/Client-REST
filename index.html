@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<script>
+const xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+  document.getElementById("demo").innerHTML = myObj.valore;
+}
+//formato oggetti javascript
+const formData={nome:"prova", valore:3};
+xmlhttp.open("POST", "index.php");
+xmlhttp.setRequestHeader("Content-type","application/json");
+var dati = JSON.stringify(formData);
+//console.log(JSON.stringify(formData));
+xmlhttp.send(dati);
+</script>
+<body>
+<h2>Richiesta POST con JSON</h2>
+<p id="demo"></p>
+</body>
+</html>
