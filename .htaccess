@@ -1,5 +1,0 @@
-# Abilita l'apache rewrite engine
-RewriteEngine on
-
-# Redireziona tutte le richieste a index.php
-RewriteRule ^(.*)$ index.php [QSA]
